@@ -1,0 +1,4 @@
+interface:
+  display_name: "morebounty"
+  short_description: "面向SRC的核心挖洞路径与验证流程"
+  default_prompt: "Use $morebounty 为这个SRC目标制定高效漏洞挖掘路径。"
