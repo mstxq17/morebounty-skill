@@ -12,24 +12,33 @@ skills/morebounty/
     └── openai.yaml
 ```
 
-## npx skill 安装
+## npx skills 安装
+
+安装到当前项目的 Codex：
 
 ```bash
-SKILL_BASE_URL=https://github.com/mstxq17/morebounty-skill/tree/main \
-  npx skill skills/morebounty
+npx skills add https://github.com/mstxq17/morebounty-skill \
+  --skill morebounty \
+  --agent codex \
+  --yes \
+  --copy
 ```
 
-安装到当前项目：
+安装位置：
 
 ```text
-.codebuddy/skills/morebounty
+.agents/skills/morebounty
 ```
 
-## Codex 安装
+全局安装到 Codex：
 
 ```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R skills/morebounty "${CODEX_HOME:-$HOME/.codex}/skills/"
+npx skills add https://github.com/mstxq17/morebounty-skill \
+  --skill morebounty \
+  --agent codex \
+  --global \
+  --yes \
+  --copy
 ```
 
 重启 Codex 后使用：
@@ -41,6 +50,7 @@ Use $morebounty 为这个SRC目标制定高效漏洞挖掘路径。
 ## 校验
 
 ```bash
+npx skills add . --list
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
   skills/morebounty
 ```
