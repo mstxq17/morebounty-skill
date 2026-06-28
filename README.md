@@ -8,8 +8,11 @@
 skills/morebounty/
 ├── SKILL.md
 ├── manifest.json
-└── agents/
-    └── openai.yaml
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── dictionaries.md
+    └── project-memory.md
 ```
 
 ## npx skills 安装
